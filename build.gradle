@@ -1,0 +1,29 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'org.pf4j'
+sourceCompatibility = '1.8'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  implementation (group: 'greeting', name: 'api', version: '1.0.0')
+  implementation(group: 'org.pf4j', name: 'pf4j', version: "${pf4jVersion}") {
+    exclude group: "org.slf4j"
+  }
+  annotationProcessor(group: 'org.pf4j', name: 'pf4j', version: "${pf4jVersion}")
+  implementation(group: 'org.pf4j', name: 'pf4j-spring', version: '0.5.0')  {
+    exclude group: "org.slf4j"
+  }
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+
+}
