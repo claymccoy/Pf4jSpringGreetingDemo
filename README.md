@@ -7,9 +7,7 @@ This demo assumes that you know the basics of Gradle (Please look at [gradle](ht
 1. Clone the repo
 2. Go to demo_gradle `cd Pf4jSpringGreetingDemo` 
 3. run `./gradlew build`
-
-* This will produce one jar, named app-plugin-demo-uberjar.jar, located in the `app/build/libs/` directory and three plugins zips located in `build/plugins` directory.
-* The plugins are `plugin-hello-plugin-0.0.1.zip`,  `plugin-KotlinPlugin-1.0.0.zip` and `plugin-welcome-plugin-0.0.1.zip`
+4. Put plugins in the './plugins' directory
 
 ### Run the demo
 
@@ -18,8 +16,6 @@ This demo assumes that you know the basics of Gradle (Please look at [gradle](ht
 ```
  ./gradlew bootRun
 ```
-
-* put any plugins in the './plugins' directory
 
 2. The demo's output should look similar to: (Please see `Boot#main()` for more details)
 ```
