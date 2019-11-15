@@ -4,10 +4,10 @@ This demo assumes that you know the basics of Gradle (Please look at [gradle](ht
 
 ### Setup/Build
 
-1. Clone the repo
-2. Go to demo_gradle `cd Pf4jSpringGreetingDemo` 
+1. clone this repo
+2. `cd Pf4jSpringGreetingDemo` 
 3. run `./gradlew build`
-4. Put plugins in the './plugins' directory
+4. optionally, put some plugins in the './plugins' directory. [This one](https://github.com/claymccoy/BjjGreetingPlugin) for example
 
 ### Run the demo
 
@@ -17,7 +17,7 @@ This demo assumes that you know the basics of Gradle (Please look at [gradle](ht
  ./gradlew bootRun
 ```
 
-2. The demo's output should look similar to: (Please see `Boot#main()` for more details)
+2. The demo's output should look similar to:
 ```
 10:09:56.098 [main] DEBUG org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@18769467
 10:09:56.107 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
