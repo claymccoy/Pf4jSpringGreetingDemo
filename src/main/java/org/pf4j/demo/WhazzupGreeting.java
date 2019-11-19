@@ -17,10 +17,8 @@ package org.pf4j.demo;
 
 import org.pf4j.Extension;
 import org.pf4j.demo.api.Greeting;
+import org.springframework.context.annotation.Primary;
 
-/**
- * @author Decebal Suiu
- */
 @Extension
 public class WhazzupGreeting implements Greeting {
 

@@ -15,28 +15,14 @@
  */
 package org.pf4j.demo;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.pf4j.PluginManager;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * A boot class that start the demo.
- *
- * @author Decebal Suiu
- */
+@SpringBootApplication
 public class Boot {
 
     public static void main(String[] args) {
-        // retrieves the spring application context
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
-
-        // retrieves automatically the extensions for the Greeting.class extension point
-        Greetings greetings = applicationContext.getBean(Greetings.class);
-        greetings.printGreetings();
-
-        // stop plugins
-        PluginManager pluginManager = applicationContext.getBean(PluginManager.class);
-        pluginManager.stopPlugins();
+        SpringApplication.run(Boot.class, args);
     }
 
 }
